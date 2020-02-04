@@ -1,7 +1,19 @@
 <mat-card>
+    <mat-card-title>General</mat-card-title>
     <img mat-card-image [src] ="" alt="">
-    <mat-card-header class="upper-case">new-york | paris | london</mat-card-header>
+    <!--<mat-card-header class="upper-case margin-2">new-york | paris | london</mat-card-header>-->
     <mat-card-content>
-
+        <mat-list style="overflow-y: scroll;max-height: 150px">
+            <mat-list-item> New-York
+                <span><button mat-fab style="background-image: url('../../assets/imgs/ny.jpg');"></button></span>
+                <span><button mat-fab style="background-image: url('../../assets/imgs/sea.jpg');"></button></span>
+            </mat-list-item>
+            <mat-list-item> Paris </mat-list-item>
+            <mat-list-item> London </mat-list-item>
+            <mat-list-item> Barcelona </mat-list-item>
+            <mat-list-item> Praha </mat-list-item>
+            <mat-list-item> Berlin </mat-list-item>
+            <mat-list-item> Moscow </mat-list-item>
+        </mat-list>
     </mat-card-content>
 </mat-card>

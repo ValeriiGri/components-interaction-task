@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatGridListModule, MatListModule} from '@angular/material';
 import { GeneralComponent } from './general/general.component';
 import { SocialComponent } from './social/social.component';
 import { WeatherComponent } from './weather/weather.component';
@@ -19,7 +19,9 @@ import { WeatherComponent } from './weather/weather.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
+      MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
