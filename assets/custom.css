@@ -1,0 +1,15 @@
+mat-grid-tile{
+    max-width: 300px;
+}
+.upper-case{
+    text-transform: uppercase;
+}
+.mat-card-header.margin-2 div{
+    margin: 0 2px;
+}
+mat-list mat-list-item div span{
+    margin-left: 10px;
+}
+mat-list.height-64-item > mat-list-item.mat-list-item{
+    height: 64px;
+}
