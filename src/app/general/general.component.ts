@@ -10,12 +10,12 @@ export class GeneralComponent implements OnInit {
 
   constructor() { }
 
-  public img1 = '../../assets/imgs/ny.jpg';
-  public img2 = '../../assets/imgs/sea.jpg';
-  public img3 = '../../assets/imgs/wf.jpg';
-  public img4 = '../../assets/imgs/hd.jpg';
-  public img5 = '../../assets/imgs/init1.jpg';
-  public img6 = '../../assets/imgs/init2.jpg';
+  public img1 = './assets/imgs/ny.jpg';
+  public img2 = './assets/imgs/sea.jpg';
+  public img3 = './assets/imgs/wf.jpg';
+  public img4 = './assets/imgs/hd.jpg';
+  public img5 = './assets/imgs/init1.jpg';
+  public img6 = './assets/imgs/init2.jpg';
   public imgFromBtn2: string;
   public imgFromBtn: string = this.img5;
 

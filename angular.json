@@ -120,6 +120,10 @@
               "devServerTarget": "components-interaction-task:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
