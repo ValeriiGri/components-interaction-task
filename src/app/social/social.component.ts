@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'task-social',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialComponent implements OnInit {
 
-  constructor() { }
+
+  @Input()
+  public imgForSocial: string;
+
+  constructor() {
+
+  }
 
   ngOnInit() {
+
   }
 
 }

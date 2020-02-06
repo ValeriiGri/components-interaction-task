@@ -10,3 +10,6 @@ mat-grid-tile{
 mat-list mat-list-item div span{
     margin-left: 10px;
 }
+mat-list.height-64-item > mat-list-item.mat-list-item{
+    height: 64px;
+}

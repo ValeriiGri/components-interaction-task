@@ -1,21 +1,16 @@
-<mat-grid-list cols="2" rowHeight="250px" style="width: 50%; margin-top: 20px">
+<mat-grid-list cols="2" rowHeight="500px" style="width: 50%; margin-top: 20px">
     <mat-grid-tile>
-        <task-general>
+        <task-general (setGeneralControl)="setImg($event)">
 
         </task-general>
     </mat-grid-tile>
 
     <mat-grid-tile>
-        <task-social>
+        <task-social [imgForSocial]="imgSocial">
 
         </task-social>
     </mat-grid-tile>
 
-    <mat-grid-tile>
-        <task-weather>
-
-        </task-weather>
-    </mat-grid-tile>
 </mat-grid-list>
 
 

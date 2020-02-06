@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'components-interaction-task';
+  public imgSocial: string;
+  public setImg(img: string){
+    this.imgSocial = img;
+  }
 }
