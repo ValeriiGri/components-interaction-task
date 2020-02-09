@@ -13,3 +13,14 @@ mat-list mat-list-item div span{
 mat-list.height-64-item > mat-list-item.mat-list-item{
     height: 64px;
 }
+ul{
+    display: flex;
+}
+ul > li{
+    list-style: none;
+
+}
+ul > li > img{
+    width: 30px;
+    border-radius: 50px;
+}

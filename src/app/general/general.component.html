@@ -3,27 +3,18 @@
     <img mat-card-image [src] ="imgFromBtn" alt="">
     <!--<mat-card-header class="upper-case margin-2">new-york | paris | london</mat-card-header>-->
     <mat-card-content>
-        <mat-list style="overflow-y: scroll;max-height: 150px" class="height-64-item">
-            <mat-list-item><span mat-line>New-York</span>
-                <span><button mat-fab
-                              (click)="imgToHead(0)"
-                              style="background-image: url('./assets/imgs/ny_icon.jpg');"></button></span>
-                <span><button mat-fab
-                              (click)="imgToSocialComp(0)"
-                              style="background-image: url('./assets/imgs/sea_icon.jpg');"></button></span>
+        <mat-list style="overflow-y: scroll;max-height: 150px"
+                  class="height-64-item"
+                  *ngFor="let city of cities index as index">
+            <mat-list-item (click)="imgToHeadAndSocialComp(index)"><span mat-line>{{city.title}}</span>
+
+                <ul>
+                    <li><img src = {{city.iconPath1}}/></li>
+                    <li><img src = {{city.iconPath2}}/></li>
+                </ul>
+
             </mat-list-item>
-            <mat-list-item> <span mat-line>Paris</span>
-                <span><button mat-fab
-                              (click)="imgToHead(1)"
-                              style="background-image: url('./assets/imgs/wf_icon.jpg');"></button></span>
-                <span><button mat-fab
-                              (click)="imgToSocialComp(1)"
-                              style="background-image: url('./assets/imgs/hd_icon.jpg');"></button></span></mat-list-item>
-            <mat-list-item> London </mat-list-item>
-            <mat-list-item> Barcelona </mat-list-item>
-            <mat-list-item> Praha </mat-list-item>
-            <mat-list-item> Berlin </mat-list-item>
-            <mat-list-item> Moscow </mat-list-item>
+
         </mat-list>
     </mat-card-content>
 </mat-card>
