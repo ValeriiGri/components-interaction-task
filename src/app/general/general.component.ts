@@ -22,11 +22,11 @@ export class GeneralComponent implements OnInit {
 {img6Path: './assets/imgs/init2.jpg'}*/
 
 
-  public imgFromBtn2: string;
+  public imgFromBtn2: string = this.cities[0].imgPath2;
   public imgFromBtn: string = this.cities[0].imgPath1;
 
   @Output()
-  public setGeneralControl: EventEmitter<string> = new EventEmitter<string>();
+  public setGeneralControl: EventEmitter<object> = new EventEmitter<object>();
 
 
   public imgToHeadAndSocialComp(flag: number): void {
@@ -34,12 +34,12 @@ export class GeneralComponent implements OnInit {
       case 0:
         this.imgFromBtn = this.cities[flag].imgPath1;
         this.imgFromBtn2 = this.cities[flag].imgPath2;
-        //this.setGeneralControl.emit(this.imgFromBtn2);
+        this.setGeneralControl.emit({imgFromBtn: this.imgFromBtn, imgFromBtn2: this.imgFromBtn2});
         break;
       case 1:
         this.imgFromBtn = this.cities[flag].imgPath1;
         this.imgFromBtn2 = this.cities[flag].imgPath2;
-        this.setGeneralControl.emit(this.imgFromBtn2);
+        this.setGeneralControl.emit({imgFromBtn: this.imgFromBtn, imgFromBtn2: this.imgFromBtn2});
         break;
     }
   }

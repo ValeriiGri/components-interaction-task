@@ -10,17 +10,18 @@ mat-grid-tile{
 mat-list mat-list-item div span{
     margin-left: 10px;
 }
-mat-list.height-64-item > mat-list-item.mat-list-item{
-    height: 64px;
+mat-list.height-90-item > mat-list-item.mat-list-item{
+    height: 90px;
+    cursor: pointer;
 }
 ul{
     display: flex;
 }
 ul > li{
     list-style: none;
-
 }
 ul > li > img{
-    width: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
 }

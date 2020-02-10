@@ -3,8 +3,8 @@
     <img mat-card-image [src] ="imgFromBtn" alt="">
     <!--<mat-card-header class="upper-case margin-2">new-york | paris | london</mat-card-header>-->
     <mat-card-content>
-        <mat-list style="overflow-y: scroll;max-height: 150px"
-                  class="height-64-item"
+        <mat-list style="max-height: 200px"
+                  class="height-90-item"
                   *ngFor="let city of cities index as index">
             <mat-list-item (click)="imgToHeadAndSocialComp(index)"><span mat-line>{{city.title}}</span>
 
