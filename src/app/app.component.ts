@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CityService} from './city.service';
 
 @Component({
   selector: 'task-root',
@@ -11,4 +12,6 @@ export class AppComponent {
   public setImg(imgs){
     this.imgSocial = imgs.imgFromBtn2;
   }
+
+
 }

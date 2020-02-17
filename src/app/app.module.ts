@@ -7,6 +7,7 @@ import {MatButtonModule, MatCardModule, MatGridListModule, MatListModule} from '
 import { GeneralComponent } from './general/general.component';
 import { SocialComponent } from './social/social.component';
 import { WeatherComponent } from './weather/weather.component';
+import {CityService} from './city.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,12 @@ import { WeatherComponent } from './weather/weather.component';
     MatListModule,
       MatButtonModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: CityService,
+      useClass: CityService
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

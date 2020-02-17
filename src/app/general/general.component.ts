@@ -1,5 +1,7 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {ICity} from './Icity';
+import {Observable} from 'rxjs';
+import {CityService} from '../city.service';
 
 @Component({
   selector: 'task-general',
@@ -8,20 +10,17 @@ import {ICity} from './Icity';
 })
 export class GeneralComponent implements OnInit {
 
-  constructor() {
+  public constructor(
+      private readonly cityService: CityService,
+  ) {
 
   }
 
 
-  public cities: Array<ICity> = [ { imgPath1: './assets/imgs/ny.jpg', imgPath2: './assets/imgs/sea.jpg', title: 'New-York',
-                                iconPath1: './assets/imgs/ny_icon.jpg', iconPath2: './assets/imgs/sea_icon.jpg'},
-                              {imgPath1: './assets/imgs/wf.jpg', imgPath2: './assets/imgs/hd.jpg', title: 'Paris',
-                                iconPath1: './assets/imgs/wf_icon.jpg', iconPath2: './assets/imgs/hd_icon.jpg'},
-                            ];
 /*{img5Path: './assets/imgs/init1.jpg'},
 {img6Path: './assets/imgs/init2.jpg'}*/
 
-
+  public cities: Array<ICity> = this.cityService.cities;
   public imgFromBtn2: string = this.cities[0].imgPath2;
   public imgFromBtn: string = this.cities[0].imgPath1;
 
